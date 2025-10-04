@@ -1,0 +1,8 @@
+﻿pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+pickle-mixin
+streamlit
+fpdf
