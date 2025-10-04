@@ -48,7 +48,8 @@ def create_pdf():
     pdf.set_font("Arial", "B", 14)
     pdf.cell(0, 10, f"Predicted Selling Price: R{st.session_state.prediction:,.2f}", ln=True)
     
-    return bytes(pdf.output(dest='S'))
+    
+    return pdf.output(dest='S').encode('latin-1')
 
 
 # Create App User Interface
