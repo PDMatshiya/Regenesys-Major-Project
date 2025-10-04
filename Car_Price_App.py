@@ -14,15 +14,13 @@ import numpy as np
 from fpdf import FPDF
 import time
 
-# -------------------------------
+
 # Load trained Decision Tree model
-# -------------------------------
 with open("decision_tree_model.pkl", "rb") as f:
     model = pickle.load(f)
 
-# -------------------------------
+
 # Initialize session state
-# -------------------------------
 if 'vehicle_age' not in st.session_state:
     st.session_state.vehicle_age = 5
 if 'max_power' not in st.session_state:
@@ -34,9 +32,7 @@ if 'fuel_type_diesel' not in st.session_state:
 if 'prediction' not in st.session_state:
     st.session_state.prediction = None
 
-# -------------------------------
-# Functions
-# -------------------------------
+# Create function that will create a pdf where users can extract car price prediction information
 def create_pdf():
     pdf = FPDF()
     pdf.add_page()
@@ -54,9 +50,8 @@ def create_pdf():
     
     return bytes(pdf.output(dest='S'))
 
-# -------------------------------
-# App UI
-# -------------------------------
+
+# Create App User Interface
 st.title("🚗 Car Price Prediction App")
 st.markdown("Fill in the details below to get an estimate of your car's selling price.")
 
