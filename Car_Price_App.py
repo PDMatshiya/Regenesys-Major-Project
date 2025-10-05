@@ -53,7 +53,7 @@ def create_pdf():
 
 
 # Create App User Interface
-st.title("🚗 Car Price Prediction App")
+st.title("Car Price Prediction App")
 st.markdown("Fill in the details below to get an estimate of your car's selling price.")
 
 # Manual number inputs with min/max info
